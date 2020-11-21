@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <style>
+        .page{
+        max-width: 60%;
+         margin: auto;
+                  background-color:#f1f1f1;
+         padding:10px;
+
+        }
+        .center{
+        text-align: left;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+  <h3>Question 3 of 10:
+ </h3>
+  <h4>Q3. How many days are there in a calendar year (excluding a leap year)?</h4>
+  <input type="radio" id="option1" name="answer" value="365 days" onclick="ShowHideDiv()">
+  <label>365 days</label><br><br>
+  <input type="radio" id="option2" name="answer" value="270 days" onclick="ShowHideDiv()">
+  <label>270 days</label><br><br>
+  <input type="radio" id="option3" name="answer" value="400 days" onclick="ShowHideDiv()">
+  <label>400 days</label><br><br>
+  <input type="radio" id="option4" name="answer" value="120 days" onclick="ShowHideDiv()">
+  <label>120 days</label><br><br>
+    <input type="submit" value="Next Question>" onclick="location.href = '/question4'"/><br>
+  <br>  <div id="disp" style=
+        "color:green; font-size:18px; font-weight:bold;">
+    </div>
+   <script>
+   function ShowHideDiv(){
+            if(option2.checked){
+            var ele = document.getElementsByName('answer');
+
+            for(i = 0; i < ele.length; i++) {
+                if(ele[i].checked)
+                document.getElementById("disp").innerHTML
+                        = "Not Correct! Try again";
+            }
+            }
+            else if(option1.checked){
+            var ele = document.getElementsByName('answer');
+
+            for(i = 0; i < ele.length; i++) {
+                if(ele[i].checked)
+                document.getElementById("disp").innerHTML
+                        = "Correct! <br>The Selected Answer is: "+ele[i].value;
+            }
+}
+            if(option3.checked){
+            var ele = document.getElementsByName('answer');
+
+            for(i = 0; i < ele.length; i++) {
+                if(ele[i].checked)
+                document.getElementById("disp").innerHTML
+                        = "Not Correct! Try again";
+            }
+            }
+                        if(option4.checked){
+            var ele = document.getElementsByName('answer');
+
+            for(i = 0; i < ele.length; i++) {
+                if(ele[i].checked)
+                document.getElementById("disp").innerHTML
+                        = "Not Correct! Try again";
+            }
+            }
+            }
+    </script>
+</div>
+</body>
+</html>
+{% endblock content %}

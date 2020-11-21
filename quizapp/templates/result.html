@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+            <style>
+        .page{
+        max-width: 60%;
+         margin: auto;
+        }
+        .center{
+                max-width: 60%;
+         margin: auto;
+        text-align: left;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+<h2>Congratulations! You have suceesfully completed</h2>
+<h4>Your Quiz Results</h4>
+    </div>
+<div class="center">
+    <table border="1">
+<thead>
+<tr>
+    <td>User_Name</td>
+    <td>Correct_Answers</td>
+    <td>Time Taken</td>
+    <td>Result</td>
+
+</tr>
+</thead>
+        <tr>
+        <td>{{user.username}}</td>
+            <td>8/10</td>
+            <td>5mins</td>
+            <td>Pass</td>
+        </tr>
+    </table>
+
+    <!--    <button><a href="/questions">Start the Quiz</a></button>-->
+<!--    <button onclick="location.href = 'index'">Back to Quizzes</button>-->
+    <br><button><a href="{% url 'index' %}">Try Again</a></button>
+        <button type="submit"><a href="{% url 'question1' %}">Back to Quizzes</a></button>
+<!--    <button onclick="location.href = 'question1'">Try Again</button>-->
+</div>
+</body>
+</html>
+{% endblock content %}

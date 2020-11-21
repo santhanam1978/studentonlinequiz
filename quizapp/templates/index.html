@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .page{
+        max-width: 60%;
+         margin: auto;
+        }
+                .page p{
+                font-size:12pt;
+        }
+        .center1{
+        max-width: 50%;
+        text-align: center;
+        background-color: #f1f1f1;
+        padding:1px 10px 10px 15px;
+        margin:0px;
+        }
+        .center{
+        max-width: 50%;
+        text-align: center;
+        background-color: #f1f1f1;
+        padding:1px 10px 10px 15px;
+        float:right;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+<h4>Quiz Instructions</h4>
+<p>
+    The quizzes consists of questions carefully designed to help you self-assess your comprehension of the information presented on the topics covered in the module. No data will be collected on the website regarding your responses or how many times you take the quiz.</p>
+    <p>Each question in the quiz is of multiple-choice questions. Read each question carefully, and click on the button next to your response that is based on the information covered on the topic in the module. Each correct or incorrect response will result in appropriate feedback immediately at the bottom of the screen.</p>
+    <p>After responding to a question, click on the "Next Question" button at the bottom to go to the next questino. After responding to the 8th question, click on "Close" on the top of the window to exit the quiz.</p>
+    <p>If you select an incorrect response for a question, you can try again until you get the correct response. If you retake the quiz, the questions and their respective responses will be randomized.</p>
+    <p>The total score for the quiz is based on your responses to all questions. If you respond incorrectly to a question or retake a question again and get the correct response, your quiz score will reflect it appropriately. However, your quiz will not be graded, if you skip a question or exit before responding to all the questions.
+</p>
+<!--<div class="center">-->
+<!--    <p>10 Questions covering basics of Class 2 Kids</p>-->
+<!--&lt;!&ndash;    <button><a href="/questions">Start the Quiz</a></button>&ndash;&gt;-->
+<!--    <button onclick="location.href = 'index'">Start Quiz</button>-->
+<!--</div>-->
+<div class="center1">
+    <h4>GK Quiz</h4>
+    <p>10 Questions covering basics of Class 1 Kids</p>
+    <p>Good Luck!</p>
+<!--    <button><a href="/questions">Start the Quiz</a></button>-->
+    <button onclick="location.href = '/question1'">Start Quiz</button>
+</div>
+</div>
+</body>
+</html>
+{% endblock content %}
